@@ -1,0 +1,11 @@
+<text>举报描述：</text>
+<view class="section">
+  <textarea class="text" placeholder="描述" type="textarea" bindinput="bindKeyContent" />
+</view>
+
+<view class="wx-view" >
+    <button catchtap="tipoff" class="wx-button">
+        举报
+        <br/>
+    </button>
+</view>

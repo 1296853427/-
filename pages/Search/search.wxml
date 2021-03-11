@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="page-index">
+  <view class="search-form">
+    <input placeholder="输入要搜索的关键字" bindinput="bindKeyInput" auto-focus />
+    <icon class="icon" type="search" />
+    <button class="searchButton" bindtap="fetchBookData">搜索</button>
+  </view>
+
+  <view class="books-list">
+    <view>搜索结果:</view>
+    <block wx:for="{{books}}" wx:key="Title" wx:for-index="list">
+      <view class="books-item" id="{{item.Title}}" catchtap="redirectToDetail" data-typeid="{{list}}">
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit src="http://127.0.0.1:8000/ims/img/{{item.fields.image}}">
+        </image>
+        <view class="books-item-txt">
+          <view class="txt-title">
+            <text>{{item.fields.Title}}</text>
+          </view>
+          <view class="txt-author">
+            <text>author: {{item.fields.Author}}</text>
+          </view>
+          <view class="txt-price">
+            <text>price: {{item.fields.Price}}</text>
+          </view>
+          <view class="line"></view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

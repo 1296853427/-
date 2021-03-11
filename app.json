@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/Question/ques",
+    "pages/shopping_cart/shopping_cart",
+    "pages/cart_assist/cart_assist",
+    "pages/product_info/product_info",
+    "pages/Search/search",
+    "pages/pre_order/pre_order",
+    "pages/share/share",
+    "pages/order/order",
+    "pages/order_confirm/order_confirm",
+    "pages/book_upload/book_upload",
+    "pages/tipOff/tipOff",
+    "pages/points/points",
+    "pages/Transaction/tran",
+    "pages/myques/myques",
+    "pages/answer/answer"
+  ],
+  "tabBar": {          
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主界面",
+      "iconPath": "static/icon/home.png",
+      "selectedIconPath": "static/icon/home-o.png"
+    },
+    {
+      "pagePath": "pages/Question/ques",
+      "text": "解题援助",
+      "iconPath": "static/icon/_search.png",
+      "selectedIconPath": "static/icon/search.png"
+    },
+    {
+      "pagePath": "pages/shopping_cart/shopping_cart",
+      "text": "购物车",
+      "iconPath": "static/icon/cart.png",
+      "selectedIconPath": "static/icon/cart-o.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "个人信息",
+      "iconPath": "static/icon/my.png",
+      "selectedIconPath": "static/icon/my-o.png"
+    }
+  ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "书籍交易系统",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

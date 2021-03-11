@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "书籍搜索",
+  "navigationBarTextStyle": "black",
+  "backgroundColor":"#13ec1d"
+}

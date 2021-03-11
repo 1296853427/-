@@ -1,0 +1,19 @@
+<!--pages/book_upload/book_upload.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit='commit'>
+      <view class="section">
+        <textarea name="title" value="{{formData}}" placeholder="请输入上架书籍的信息：" />
+      </view>
+      <view class="section">
+        <button form-type="submit" class="weui-btn" type="default" size="default" style="width:100%;margin-top:5%;">提交</button>
+      </view>
+    </form>
+    <view class="section">
+        <textarea  name="contact"   style='height:50px;margin-top:16px;'  placeholder="管理人员将会审核您的上架请求,如通过将会上架" disabled="disabled"/>
+      </view>
+  </view>
+</view>
+
+
+

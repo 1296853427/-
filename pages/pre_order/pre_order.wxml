@@ -1,0 +1,21 @@
+<!--pages/pre_order/pre_order.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit='commit'>
+      <view class="section">
+        <textarea name="variety" value="{{formData}}" placeholder="当您发现商城中找不到您要的书时，可以在此处键入书名或其他可确定该书的信息如ISBN编号，商家将会尝试为您订购该书" />
+      </view>
+      <view class="section">
+        <textarea name="phone" value="{{formData}}" style='height:50px;margin-top:16px;'  placeholder="留下您的联系方式，方便我们和您联系" />
+      </view>
+      <view class="section">
+        <button form-type="submit" class="weui-btn" type="default" size="default" style="width:100%;margin-top:5%;">提交</button>
+      </view>
+    </form>
+    <view class="section">
+        <textarea  name="contact"   style='height:50px;margin-top:16px;'  placeholder="管理人员将会在您提交预订订单后的三个工作日内与您联系" disabled="disabled"/>
+      </view>
+  </view>
+</view>
+
+

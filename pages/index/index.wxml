@@ -1,0 +1,81 @@
+<!--index.wxml-->
+
+<view class="navbar">
+	<text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique"
+		bindtap="navbarTap">{{item}}</text>
+</view>
+<view wx:if="{{currentTab==0}}">
+	<!-- banner -->
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{thisinterval}}"
+		duration="{{duration}}">
+		<block wx:for="{{imgUrls}}">
+			<swiper-item>
+				<image src="{{item}}" />
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<view class="navs">
+		<block wx:for-items="{{navItems}}" wx:key="name">
+			<view class="nav-item" id="{{item.typeId}}" catchtap="catchTapSelect" data-type="{{item.name}}"
+				data-typeid="{{item.typeId}}">
+				<image src="{{item.imageurl}}" class="nav-image" />
+				<text>{{item.name}}</text>
+			</view>
+		</block>
+	</view>
+
+	<view class="separate"></view>
+
+	<view class="advertisement">
+		<view class="marquee_box">
+			<view class="marquee_text" style="{{orientation}}:{{marqueeDistance}}px;font-size: {{size}}px;">
+				<image src="{{adUrl}}" class='ad-image' />{{text}}
+			</view>
+		</view>
+	</view>
+
+	<view class="hots-container">
+		<view class="category-title">
+			<text class="title">推荐书籍</text>
+		</view>
+		<scroll-view scroll-x="true">
+			<view class="goods">
+				<block wx:for-items="{{recommendItems}}" wx:key="goodId" wx:for-index="bindex" wx:if="{{item.name!=null}}">
+					<view class="goods-item" catchtap="catchTapCategory" data-type="{{item.name}}" data-typeid="{{bindex}}">
+						<image src="{{item.imageurl}}" class="goods-image" />
+						<text>{{item.name}}</text>
+						<p>{{item.price}}</p>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+	</view>
+</view>
+
+<view wx:if="{{currentTab==1}}">
+	<!-- banner -->
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{thisinterval}}"
+		duration="{{duration}}">
+		<block wx:for="{{imgUrls}}">
+			<swiper-item>
+				<image src="{{item}}" />
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<view class="navs_old">
+		<block wx:for-items="{{navItems_old}}" wx:key="name">
+			<view class="nav-item_old" catchtap="catchTapSelect_old" data-type="{{item.name_old}}"
+				data-typeid="{{item.typeId}}">
+				<image src="{{item.imageurl}}" class="nav-image_old" />
+				<text>{{item.name}}</text>
+			</view>
+		</block>
+	</view>
+
+
+	<view class="advertising">
+		<image src="../../static/icon/advertise.png"  />
+	</view>
+</view>

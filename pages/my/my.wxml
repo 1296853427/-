@@ -1,0 +1,176 @@
+<view>
+  <!--header-->
+  <view class="tui-header-box" style="height:{{height}}px;background:rgba(255,255,255,{{opcity}})">
+    <view class="tui-header" style="padding-top:{{top}}px;opacity:{{opcity}}">
+      我的
+    </view>
+  </view>
+  <!--header-->
+  <view class="tui-mybg-box">
+    <image src="../../static/icon/img_bg_3x.png" class="tui-my-bg" mode="widthFix"></image>
+    <view class="tui-header-center">
+      <!-- <image src="/static/images/my/mine_def_touxiang_3x.png" class="tui-avatar" bindtap="href" data-type="3"></image> -->
+      <open-data type="userAvatarUrl" class="tui-avatar"></open-data>
+      <view class="tui-info">
+        <view class="tui-nickname">
+          <open-data type="userNickName" lang="zh_CN"></open-data>
+          <!-- <text>echo.</text> -->
+        </view>
+      </view>
+    </view>
+    <view class="tui-header-btm" bindtap="href" data-type="5">
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">25</view>
+        <view class="tui-btm-text">收藏夹</view>
+      </view>
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">22</view>
+        <view class="tui-btm-text">店铺关注</view>
+      </view>
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">3</view>
+        <view class="tui-btm-text">喜欢的内容</view>
+      </view>
+      <view class="tui-btm-item">
+        <view class="tui-btm-num">44</view>
+        <view class="tui-btm-text">足迹</view>
+      </view>
+    </view>
+  </view>
+  <view class="tui-content-box">
+    <view class="tui-box tui-order-box">
+      <tui-list-cell arrow="{{true}}" padding="0" lineLeft="{{false}}" bind:click="href" data-type="1">
+        <view class="tui-cell-header">
+          <view class="tui-cell-title">我的订单</view>
+          <view class="tui-cell-sub">查看全部订单</view>
+        </view>
+      </tui-list-cell>
+      <view class="tui-order-list">
+        <view class="tui-order-item" bindtap="href" data-type="1">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_daifukuan_3x.png" class="tui-order-icon"></image>
+          </view>
+          <view class="tui-order-text">待付款</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="1">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_daifahuo_3x.png" class="tui-order-icon"></image>
+          </view>
+          <view class="tui-order-text">待取货</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_pingjia_3x.png" class="tui-order-icon"></image>
+          </view>
+          <view class="tui-order-text">评价</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_tuikuan_3x.png" class="tui-order-icon"></image>
+          </view>
+          <view class="tui-order-text">售后</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="tui-box tui-assets-box">
+      <tui-list-cell padding="0" last="{{true}}" hover="{{false}}">
+        <view class="tui-cell-header">
+          <view class="tui-cell-title">我的资产</view>
+        </view>
+      </tui-list-cell>
+      <view class="tui-order-list tui-assets-list">
+        <view class="tui-order-item" bindtap="href" data-type="6">
+          <view class="tui-assets-num">
+            <text>3</text>
+          </view>
+          <view class="tui-assets-text">优惠券</view>
+        </view>
+        <view class="tui-order-item"  bindtap="href" data-type="2">
+          <view class="tui-assets-num">
+            <text>7</text>
+            <!-- <text>{{point}}</text> -->
+          </view>
+          <view class="tui-assets-text">积分</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="6">
+          <view class="tui-assets-num">
+            <text>0</text>
+          </view>
+          <view class="tui-assets-text">红包</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="6">
+          <view class="tui-assets-num">
+            <text>1</text>
+          </view>
+          <view class="tui-assets-text">礼品卡</view>
+        </view>
+        <view class="tui-order-item" bindtap="href" data-type="6">
+          <view class="tui-assets-num">
+            <text>20</text>
+          </view>
+          <view class="tui-assets-text">津贴</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="tui-box tui-tool-box" bindtap="href" data-type="7">
+      <tui-list-cell arrow="{{true}}" padding="0" lineLeft="{{false}}">
+        <view class="tui-cell-header">
+          <view class="tui-cell-title">常用工具</view>
+          <view class="tui-cell-sub">查看更多</view>
+        </view>
+      </tui-list-cell>
+      <view class="tui-order-list tui-flex-wrap">
+        <view class="tui-tool-item" bindtap="href" data-type="7">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_gift_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">免费领好礼</view>
+        </view>
+        <view class="tui-tool-item" bindtap="href" data-type="7">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_purse_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">钱包</view>
+        </view>
+        <view class=" tui-tool-item" bindtap="href" data-type="7">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_ticket_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">领券中心</view>
+        </view>
+        <view class=" tui-tool-item" bindtap="href" data-type="7">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_kefu_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">投诉/举报</view>
+        </view>
+        <view class="tui-tool-item" bindtap="href" data-type="7">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_fanxian_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">每日返现</view>
+        </view>
+        <view class="tui-tool-item" bindtap="href" data-type="7">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_tuan_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">超值拼团</view>
+        </view>
+        <view class="tui-tool-item" bindtap="href" data-type="7">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_zhihuan_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">闲置换钱</view>
+        </view>
+        <view class="tui-tool-item" bindtap="href" data-type="4">
+          <view class="tui-icon-box">
+            <image src="../../static/icon/icon_kaipiao_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">活动记录</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

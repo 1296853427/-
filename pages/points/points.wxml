@@ -1,0 +1,50 @@
+<view class="container">
+  <view class='top flexct wt100'>
+    <text class='title1'>{{point}}</text>
+    <open-data type="userNickName" lang="zh_CN" class='title mgtop60'></open-data>
+  </view>
+  <view class='classify wt100 flexct'>
+    <view class='content flexlb wt90'>
+      <view class='list flexct {{ctselect == 1?"select":""}}' bindtap='ctbind' data-idx='1'>兑换商品</view>
+      <view class='list flexct {{ctselect == 2?"select":""}}' bindtap='ctbind' data-idx='2'>积分记录</view>
+    </view>
+  </view>
+  <view wx:if="{{gift != '' && content == ''}}" class='info wt100 flexct'>
+    <view wx:for="{{gift}}" wx:for-index="list">
+      <view id="{{item.ID}}" data-typeid="{{list}}">
+        <image style="width: 80px;height:104px;background-color: #eeeeee;" aspectFit  src="{{item.image}}"></image>
+        <view>
+          <view>
+            <text>{{item.title}}</text>
+          </view>
+          <view>
+            <text>所需积分：{{item.price}}</text>
+          </view>
+          <button catchtap="exchange">
+            <text>兑换</text>
+          </button>
+          <view class="line"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{gift == '' && content != ''}}" class='info wt100 flexct'>
+    <view class='if-content flexlb wt90' wx:for="{{content}}">
+      <view class='left flexsx'>
+        <view>{{item.title}}</view> 
+        <view> 
+          <text class='text'>积分 </text>
+          {{item.size}}
+        </view>
+      </view>
+      <view class='right flexsx'> 
+        <view>{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='info wt100 flexct'>
+    <view class='nothing'>
+      暂无记录
+    </view>
+  </view>
+</view>

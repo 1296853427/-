@@ -1,0 +1,13 @@
+<!--pages/share/share.wxml-->
+<view class='container'>
+  <view class='wt100'><image class='wt100' mode='widthFix' src='../../static/icon/hhh.png'></image> </view>
+  <button class='btn mypp' open-type="share">立刻邀请微信好友</button>
+  <view class='rule'>
+    <view> 1.从未使用书籍交易系统的好友，在接受邀请后，完成一笔交易；</view>
+    <view>2.每个邀请成功一人奖励800积分；</view>
+    <view>3.奖励积分使用范围：积分商城上所有产品；</view>
+    <view>4.要想获得更多的积分需要邀请不同的新用户哦；</view>
+    <view>5.本活动最终解析权归常宝宝所有；</view>
+    <button class='btn myecode'>活动规则</button>
+  </view>
+</view>
